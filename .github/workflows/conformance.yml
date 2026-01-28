@@ -1,0 +1,119 @@
+name: Conformance Check
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  structure-check:
+    name: Verify Repository Structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required root files
+        run: |
+          echo "Checking required root files..."
+          required_files=(
+            "README.md"
+            "REPO_MAP.md"
+            "DOCUMENTATION_INDEX.md"
+            "METHODOLOGY.md"
+            "CONTRIBUTING.md"
+            "LICENSE"
+          )
+
+          for file in "${required_files[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✓ $file exists"
+            else
+              echo "✗ $file is missing"
+              exit 1
+            fi
+          done
+
+      - name: Check core structure
+        run: |
+          echo "Checking core/ structure..."
+          required_core=(
+            "core/README.md"
+            "core/spec/CHECKPOINTS.md"
+            "core/agent-operating-model/AGENT_OPERATING_MODEL.md"
+            "core/agent-operating-model/ESCALATION_RULES.md"
+            "core/agent-operating-model/HANDOFF_TEMPLATE.md"
+            "core/templates/ADR_TEMPLATE.md"
+          )
+
+          for file in "${required_core[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✓ $file exists"
+            else
+              echo "✗ $file is missing"
+              exit 1
+            fi
+          done
+
+      - name: Check runtime structure
+        run: |
+          echo "Checking runtime/ structure..."
+          required_runtime=(
+            "runtime/README.md"
+            "runtime/golden-path/QUICKSTART_HUMAN.md"
+            "runtime/golden-path/QUICKSTART_AGENT.md"
+            "runtime/prompts/CLAUDE_CODE_SYSTEM.md"
+            "runtime/quality-gates/definition-of-done.md"
+          )
+
+          for file in "${required_runtime[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✓ $file exists"
+            else
+              echo "✗ $file is missing"
+              exit 1
+            fi
+          done
+
+      - name: Check bench structure
+        run: |
+          echo "Checking bench/ structure..."
+          required_bench=(
+            "bench/README.md"
+          )
+
+          for file in "${required_bench[@]}"; do
+            if [ -f "$file" ]; then
+              echo "✓ $file exists"
+            else
+              echo "✗ $file is missing"
+              exit 1
+            fi
+          done
+
+          echo "All conformance checks passed!"
+
+  content-check:
+    name: Verify Document Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check README has required sections
+        run: |
+          echo "Checking README.md structure..."
+          required_sections=(
+            "What This Repo Is"
+            "Start Here"
+          )
+
+          for section in "${required_sections[@]}"; do
+            if grep -q "$section" README.md; then
+              echo "✓ README contains '$section'"
+            else
+              echo "✗ README missing section: '$section'"
+              exit 1
+            fi
+          done

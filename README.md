@@ -1,107 +1,84 @@
 # AI-Driven Development Instructions
 
-[![Documentation](https://img.shields.io/badge/docs-59%20files-blue)](./DOCUMENTATION_INDEX.md)
+[![Documentation](https://img.shields.io/badge/docs-99%20files-blue)](./DOCUMENTATION_INDEX.md)
 [![Code Examples](https://img.shields.io/badge/examples-500%2B-orange)](./CODE_EXAMPLES_INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> **A Security & Platform Engineering blueprint for AI-assisted software delivery.**
->
-> This repository demonstrates how to write **unambiguous, auditable, security-by-design documentation** that enables AI coding assistants to implement complex systems **without drifting from architecture, security, and operations standards**.
+> A reference framework for **secure, auditable AI-assisted software delivery** — from documentation methodology to autonomous agentic workflows.
 
-## What Is This Project?
+---
 
-This repository is a **reference blueprint** to operationalize **secure, consistent delivery** with AI coding assistants: specs, validation checkpoints, security guardrails, and review checklists designed for **enterprise SDLC**.
+## What This Repo Is
 
-**The example used**: A cloud-native AI Workflow Processing Platform (PHP 8.3, Symfony 7, Kubernetes).
+1. **A methodology** for writing unambiguous, security-by-design documentation that enables AI coding assistants to implement systems without drifting from standards.
 
-**The real value**: The methodology for turning security requirements into executable SDLC guardrails.
+2. **A reference implementation** demonstrating the methodology through a complete platform specification (PHP 8.3, Symfony 7, Kubernetes).
 
-## What This Is NOT
+3. **An agentic development framework** for autonomous Issue→PR workflows where AI agents plan, implement, test, and deliver with human oversight at defined checkpoints.
 
-- Not a prompt library or "magic" AI coding trick
+## What This Repo Is NOT
+
+- Not a prompt library or "magic" AI coding tricks
 - Not a full product implementation
-- It is a **methodology + reference spec set** to make delivery predictable, secure, and auditable with AI assistance
+- Not a universal agent or model comparison
+- Not autonomous execution without human supervision
 
-## Hiring Relevance
+---
 
-This repo demonstrates senior-level **Security Engineering / Platform Engineering** capabilities:
+## Start Here
 
-- Turning security requirements into **executable SDLC guardrails** (checklists, gates, review criteria)
-- Writing **unambiguous specs** that scale across teams and reduce delivery risk
-- Designing documentation that supports **auditability**, onboarding, and consistent architecture decisions
-- Aligning engineering execution with security-by-design and operational readiness
+| Your Goal | Start With |
+|-----------|------------|
+| Understand the methodology | [METHODOLOGY.md](METHODOLOGY.md) |
+| Navigate as an AI agent | [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) |
+| Evaluate security practices | [02-security/07-security-checklist.md](02-security/07-security-checklist.md) |
+| Explore agentic workflows | [core/README.md](core/README.md) |
+| **Apply to your own project** | [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) |
+| Find your path by profile | [REPO_MAP.md](REPO_MAP.md) |
 
-## Evaluate in 10 Minutes
+---
 
-1. Read [METHODOLOGY.md](METHODOLOGY.md) — the AI-driven documentation methodology
-2. Open [02-security/07-security-checklist.md](02-security/07-security-checklist.md) — security-by-design guardrails
-3. Review [06-cicd/04-quality-gates.md](06-cicd/04-quality-gates.md) — how controls become pipeline gates
-4. Check [05-code-review/02-security-review-checklist.md](05-code-review/02-security-review-checklist.md) — standardized security reviews
+## Repository Structure
 
-## Security & Compliance Focus
+```
+├── [Methodology & Guides]     README, METHODOLOGY, LLM_USAGE_GUIDE, REPO_MAP
+├── [Reference Specs]          01-architecture/ through 08-services/
+├── [Agentic Framework]
+│   ├── core/                  Specification, operating model, templates
+│   ├── runtime/               Quickstarts, prompts, quality gates
+│   ├── bench/                 10 benchmark tasks, scoring, runner
+│   └── tools/                 Validation utilities
+├── [Case Studies]             case-studies/
+└── [Supporting]               LICENSE, CONTRIBUTING, .github/
+```
 
-Includes security-by-design guidance covering:
+Full index: [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
 
-- **Zero Trust Architecture**: mTLS, service mesh security, micro-segmentation
-- **IAM & Secrets Management**: OAuth2/OIDC, RBAC/ABAC, Vault integration
-- **Network & Data Protection**: Encryption at rest/transit, PII handling
-- **Incident Response**: Runbooks, escalation procedures, disaster recovery
-- **Security Review Checklists**: Pre-deployment validation, pipeline quality gates
-- **Compliance Frameworks**: GDPR, SOC2, ISO27001, NIS2 alignment
+---
 
 ## Key Principles
 
-### 1. Explicit Over Implicit
-
+### Explicit Over Implicit
 Every decision includes justification. AI agents follow documented reasoning, not guesses.
 
-```markdown
-Use PostgreSQL 15+ for the following reasons:
-- ACID compliance required for financial workflow data
-- JSONB support for flexible metadata storage
-- Row-level security for multi-tenant isolation
-```
+### Validation Checkpoints
+Every workflow stage includes verification criteria for self-validation.
 
-### 2. Validation Checkpoints
-
-Every section includes verification criteria for self-validation:
-
-```markdown
-## Validation Checkpoint
-- [ ] All domain entities use readonly properties
-- [ ] Value objects implement equals() method
-- [ ] Repository interfaces are in Domain layer
-- [ ] PHPStan level 9 passes with no errors
-```
-
-### 3. Security Gates as Code
-
+### Security Gates as Code
 Security requirements become enforceable pipeline gates, not optional guidelines.
 
-## Documentation Structure
+### Human at the Checkpoints
+Autonomous execution within bounds; escalation and approval at defined gates.
 
-```
-ai-driven-dev-instructions/
-├── METHODOLOGY.md                 # Core methodology (start here)
-├── GLOSSARY.md                    # Key terms and definitions
-├── LLM_USAGE_GUIDE.md            # AI agent entry point
-├── IMPLEMENTATION_ROADMAP.md      # Phased implementation plan
-│
-├── 01-architecture/               # System design & ADRs
-├── 02-security/                   # Security-by-design specs
-├── 03-infrastructure/             # Cloud-native infrastructure
-├── 04-development/                # Coding standards & practices
-├── 05-code-review/                # Review checklists & quality
-├── 06-cicd/                       # Pipeline & deployment
-├── 07-operations/                 # Monitoring & incident response
-└── 08-services/                   # Microservice specifications
-```
+---
 
-Full structure: [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
+## Security & Compliance
 
-## Example Target Platform
+Includes enterprise-grade security guidance: Zero Trust Architecture, IAM & Secrets Management, Network & Data Protection, Incident Response, and alignment with GDPR, SOC2, ISO27001, and NIS2.
 
-The methodology is demonstrated through a complete platform specification:
+---
+
+## Technology Stack (Reference Example)
 
 | Category | Technology |
 |----------|------------|
@@ -113,23 +90,20 @@ The methodology is demonstrated through a complete platform specification:
 | Observability | Prometheus, Grafana, Loki, Tempo |
 | CI/CD | GitHub Actions + ArgoCD |
 
+---
+
 ## Metrics
 
 | Metric | Value |
 |--------|-------|
-| Documentation files | 59 |
-| Words | ~213,000 |
+| Documentation files | 99 |
+| Words | ~250,000 |
 | Code examples | 500+ |
 | Microservices documented | 7 |
-| Cross-references | 200+ |
+| Benchmark tasks | 10 |
+| Agent prompts | 6 |
 
-## Key Differentiators
-
-1. **Security-First**: Security controls embedded in every layer
-2. **Auditable**: Every decision justified and traceable
-3. **Executable**: Specs translate directly to pipeline gates
-4. **LLM-Optimized**: Structured for autonomous agent execution
-5. **Enterprise-Grade**: Compliance, operations, and incident response included
+---
 
 ## Contributing
 
@@ -137,7 +111,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) for details.
+MIT License — See [LICENSE](LICENSE) for details.
 
 ## Author
 
@@ -145,4 +119,4 @@ MIT License - See [LICENSE](LICENSE) for details.
 
 ---
 
-*A methodology for secure, auditable AI-assisted software delivery.*
+*A framework for secure, auditable AI-assisted software delivery.*

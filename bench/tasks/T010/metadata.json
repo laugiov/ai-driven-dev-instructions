@@ -1,0 +1,10 @@
+{
+  "id": "T010",
+  "name": "Full Issue-to-PR Demo",
+  "category": "integration",
+  "difficulty": "hard",
+  "estimated_minutes": 60,
+  "skills_tested": ["full_workflow", "documentation", "checkpoints", "pr_creation"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["integration", "workflow", "demo", "comprehensive"]
+}

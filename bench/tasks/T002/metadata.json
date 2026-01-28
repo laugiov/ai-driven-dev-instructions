@@ -1,0 +1,10 @@
+{
+  "id": "T002",
+  "name": "Add PR Template",
+  "category": "documentation",
+  "difficulty": "easy",
+  "estimated_minutes": 20,
+  "skills_tested": ["template_creation", "markdown", "requirements_reading"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["docs", "templates", "github"]
+}

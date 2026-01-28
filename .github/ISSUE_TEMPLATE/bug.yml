@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report an error, broken link, or incorrect information
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue. Please provide details to help us fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the problem?
+      placeholder: Describe what's wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where is the problem?
+      placeholder: |
+        File path, line number, or URL
+        Example: core/spec/CHECKPOINTS.md:45
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe the correct behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: Describe what you observed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Bug Type
+      options:
+        - Broken link
+        - Incorrect information
+        - Typo / Grammar
+        - Missing content
+        - Formatting issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested Fix
+      description: If you know how to fix it, please describe
+      placeholder: Optional - describe the solution
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true

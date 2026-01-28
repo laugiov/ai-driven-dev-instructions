@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Benchmark Task Result",
+  "type": "object",
+  "required": ["task_id", "status", "metrics", "timestamp"],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "description": "Task identifier (e.g., T001)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pass", "fail", "partial", "timeout", "error"],
+      "description": "Overall task result"
+    },
+    "metrics": {
+      "type": "object",
+      "required": ["iterations", "duration_seconds"],
+      "properties": {
+        "iterations": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of attempts before completion"
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Wall-clock time to completion"
+        },
+        "tokens_input": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total input tokens consumed"
+        },
+        "tokens_output": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total output tokens generated"
+        },
+        "files_modified": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of files changed"
+        },
+        "lines_changed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total lines added/removed"
+        }
+      }
+    },
+    "checkpoints": {
+      "type": "object",
+      "properties": {
+        "C0": {"type": "boolean"},
+        "C1": {"type": "boolean"},
+        "C2": {"type": "boolean"},
+        "C3": {"type": "boolean"}
+      },
+      "description": "Checkpoint completion status"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion", "met"],
+        "properties": {
+          "criterion": {"type": "string"},
+          "met": {"type": "boolean"},
+          "notes": {"type": "string"}
+        }
+      },
+      "description": "Per-criterion results"
+    },
+    "quality_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Human assessment of output quality"
+    },
+    "escalations": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of escalations raised"
+    },
+    "errors": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Error messages if any"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional observations"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the task was completed"
+    },
+    "agent": {
+      "type": "string",
+      "description": "Agent/model identifier"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "T004",
+  "name": "Update Documentation Index",
+  "category": "documentation",
+  "difficulty": "easy",
+  "estimated_minutes": 15,
+  "skills_tested": ["documentation", "markdown_tables", "index_management"],
+  "checkpoints": ["C0", "C2", "C3"],
+  "tags": ["docs", "index", "tables"]
+}

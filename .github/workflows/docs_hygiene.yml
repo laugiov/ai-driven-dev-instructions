@@ -1,0 +1,71 @@
+name: Documentation Hygiene
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - '**.md'
+      - '.github/workflows/docs_hygiene.yml'
+  push:
+    branches: [main, master]
+    paths:
+      - '**.md'
+
+jobs:
+  markdown-link-check:
+    name: Check Markdown Links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
+          config-file: '.github/mlc_config.json'
+          folder-path: '.'
+          file-extension: '.md'
+          check-modified-files-only: 'yes'
+
+  markdown-lint:
+    name: Lint Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+
+      - name: Run markdownlint
+        run: |
+          markdownlint '**/*.md' \
+            --ignore node_modules \
+            --ignore .github \
+            --disable MD013 MD033 MD041 \
+            || echo "::warning::Markdown lint found issues (non-blocking)"
+
+  heading-check:
+    name: Check Heading Uniqueness
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for duplicate headings
+        run: |
+          echo "Checking for duplicate headings in markdown files..."
+          find . -name "*.md" -not -path "./.git/*" | while read file; do
+            duplicates=$(grep -E "^#{1,6} " "$file" | sort | uniq -d)
+            if [ -n "$duplicates" ]; then
+              echo "::warning file=$file::Duplicate headings found: $duplicates"
+            fi
+          done
+          echo "Heading check complete"

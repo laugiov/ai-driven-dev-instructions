@@ -1,0 +1,10 @@
+{
+  "id": "T001",
+  "name": "Fix Broken Link in README",
+  "category": "documentation",
+  "difficulty": "easy",
+  "estimated_minutes": 10,
+  "skills_tested": ["link_validation", "markdown", "git"],
+  "checkpoints": ["C0", "C2", "C3"],
+  "tags": ["docs", "links", "beginner"]
+}

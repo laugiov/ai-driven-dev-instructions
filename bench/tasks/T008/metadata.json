@@ -1,0 +1,10 @@
+{
+  "id": "T008",
+  "name": "Create Workflow Diagram",
+  "category": "documentation",
+  "difficulty": "medium",
+  "estimated_minutes": 30,
+  "skills_tested": ["ascii_art", "visualization", "technical_writing"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["docs", "diagrams", "visualization"]
+}

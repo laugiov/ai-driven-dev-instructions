@@ -1,0 +1,10 @@
+{
+  "id": "T009",
+  "name": "Implement Handoff Validator",
+  "category": "tooling",
+  "difficulty": "hard",
+  "estimated_minutes": 50,
+  "skills_tested": ["python", "yaml", "schema_validation", "cli_tools"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["tools", "python", "validation", "yaml"]
+}

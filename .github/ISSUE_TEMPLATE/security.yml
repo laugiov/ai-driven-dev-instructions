@@ -1,0 +1,82 @@
+name: Security Issue
+description: Report a security concern (non-sensitive only)
+title: "[Security]: "
+labels: ["security", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Important**: For sensitive security vulnerabilities, please email directly instead of using this public form.
+
+        Use this template for security-related documentation issues, best practice concerns, or non-sensitive security improvements.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the security concern
+      placeholder: What is the security issue or improvement?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Documentation gap (missing security guidance)
+        - Best practice concern
+        - Outdated security recommendation
+        - Security check improvement
+        - Compliance-related
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where is this relevant?
+      placeholder: File path or section
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could happen if this is not addressed?
+      placeholder: Describe the risk
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommended Action
+      description: How should this be fixed?
+      placeholder: Describe the solution
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low (minor improvement)
+        - Medium (should fix soon)
+        - High (needs prompt attention)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: This does NOT contain sensitive vulnerability details
+          required: true
+        - label: I have searched existing issues to avoid duplicates
+          required: true

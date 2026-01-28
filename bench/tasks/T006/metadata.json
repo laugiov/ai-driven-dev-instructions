@@ -1,0 +1,10 @@
+{
+  "id": "T006",
+  "name": "Create Issue Template",
+  "category": "configuration",
+  "difficulty": "medium",
+  "estimated_minutes": 25,
+  "skills_tested": ["yaml", "github_templates", "ux_design"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["github", "templates", "yaml"]
+}

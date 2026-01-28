@@ -1,0 +1,10 @@
+{
+  "id": "T003",
+  "name": "Create Glossary Entry",
+  "category": "documentation",
+  "difficulty": "easy",
+  "estimated_minutes": 15,
+  "skills_tested": ["documentation", "formatting", "precision"],
+  "checkpoints": ["C0", "C2", "C3"],
+  "tags": ["docs", "glossary", "beginner"]
+}

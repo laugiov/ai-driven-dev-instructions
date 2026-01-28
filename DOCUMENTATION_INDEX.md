@@ -2,9 +2,9 @@
 
 ## Documentation Status
 
-**Overall Progress**: 100% Complete (63 core files + 3 LLM guides = 66 total) ✅
-**Last Updated**: 2025-01-07 (Final Update)
-**Status**: Production-Ready with LLM-Optimized Navigation
+**Overall Progress**: 100% Complete (99 total files) ✅
+**Last Updated**: 2026-01-28
+**Status**: Production-Ready with Agentic Dev Framework
 **LLM Usability Score**: 10/10 ⭐
 
 This index provides an overview of all documentation files, their purpose, and current status.
@@ -23,6 +23,52 @@ This index provides an overview of all documentation files, their purpose, and c
 | [CODE_EXAMPLES_INDEX.md](CODE_EXAMPLES_INDEX.md) | 🚀 NEW | 12,000+ | **COMPLETE CODE REFERENCE** | 500+ examples indexed, organized by category, direct links, copy-paste ready |
 
 **Impact**: These 3 guides increased LLM Usability Score from 7.5/10 to 10/10 ⭐
+
+---
+
+## 🤖 Agentic Dev Reference (4 directories)
+
+A framework for autonomous AI-driven development: Issue→PR workflows with human checkpoints.
+
+### Core Specification (`core/`)
+
+| File | Purpose |
+|------|---------|
+| [AGENT_OPERATING_MODEL.md](core/agent-operating-model/AGENT_OPERATING_MODEL.md) | Roles, workflow loop, stop conditions |
+| [CHECKPOINTS.md](core/spec/CHECKPOINTS.md) | C0-C4 validation gates |
+| [ESCALATION_RULES.md](core/agent-operating-model/ESCALATION_RULES.md) | When to request human input |
+| [HANDOFF_TEMPLATE.md](core/agent-operating-model/HANDOFF_TEMPLATE.md) | Role transition format |
+| [RISK_MODEL.md](core/agent-operating-model/RISK_MODEL.md) | Risk taxonomy and mitigation |
+| [ADR_TEMPLATE.md](core/templates/ADR_TEMPLATE.md) | Architecture decision records |
+
+### Runtime (`runtime/`)
+
+| File | Purpose |
+|------|---------|
+| [QUICKSTART_HUMAN.md](runtime/golden-path/QUICKSTART_HUMAN.md) | 15-minute human onboarding |
+| [QUICKSTART_AGENT.md](runtime/golden-path/QUICKSTART_AGENT.md) | Agent file reading order |
+| [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) | **Apply framework to your project** |
+| [FIRST_TASK.md](runtime/golden-path/FIRST_TASK.md) | Guided Issue→PR walkthrough |
+| [definition-of-done.md](runtime/quality-gates/definition-of-done.md) | DoD by change type |
+| [CLAUDE_CODE_SYSTEM.md](runtime/prompts/CLAUDE_CODE_SYSTEM.md) | System prompt |
+| [PROMPT_PACK.md](runtime/prompts/PROMPT_PACK.md) | Prompt usage guide |
+
+### Benchmark (`bench/`)
+
+| Item | Purpose |
+|------|---------|
+| [10 Tasks](bench/README.md) | T001-T010, easy to hard |
+| [Scoring Schema](bench/scoring/scoring_schema.json) | Result format |
+| [Metrics](bench/scoring/metrics.md) | What we measure |
+| [Runner](bench/runner/run_bench.sh) | Execute benchmarks |
+
+### Case Studies (`case-studies/`)
+
+| File | Purpose |
+|------|---------|
+| [CASE_STUDY_01_issue_to_pr.md](case-studies/CASE_STUDY_01_issue_to_pr.md) | Complete workflow example |
+
+**Navigation**: See [REPO_MAP.md](REPO_MAP.md) for quick-start paths by profile.
 
 ---
 

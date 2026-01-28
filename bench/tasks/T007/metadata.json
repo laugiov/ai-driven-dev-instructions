@@ -1,0 +1,10 @@
+{
+  "id": "T007",
+  "name": "Add Validation Script",
+  "category": "tooling",
+  "difficulty": "medium",
+  "estimated_minutes": 40,
+  "skills_tested": ["python", "file_operations", "regex", "cli_tools"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["tools", "python", "validation"]
+}

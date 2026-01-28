@@ -1,0 +1,10 @@
+{
+  "id": "T005",
+  "name": "Write ADR for Technology Choice",
+  "category": "documentation",
+  "difficulty": "medium",
+  "estimated_minutes": 30,
+  "skills_tested": ["adr_writing", "decision_documentation", "analysis"],
+  "checkpoints": ["C0", "C1", "C2", "C3"],
+  "tags": ["docs", "adr", "architecture"]
+}
