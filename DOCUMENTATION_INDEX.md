@@ -135,7 +135,7 @@ A complete reference implementation demonstrating the methodology.
 | [03-service-mesh.md](examples/php-symfony-k8s/03-infrastructure/03-service-mesh.md) | Istio configuration |
 | [04-observability-stack.md](examples/php-symfony-k8s/03-infrastructure/04-observability-stack.md) | Prometheus, Grafana |
 | [05-disaster-recovery.md](examples/php-symfony-k8s/03-infrastructure/05-disaster-recovery.md) | DR procedures |
-| [06-message-queue.md](examples/php-symfony-k8s/03-infrastructure/06-message-queue.md) | RabbitMQ |
+| [06-scalability-strategy.md](examples/php-symfony-k8s/03-infrastructure/06-scalability-strategy.md) | Scalability |
 
 ### Development (8 files)
 
@@ -158,7 +158,7 @@ A complete reference implementation demonstrating the methodology.
 | [02-security-review-checklist.md](examples/php-symfony-k8s/05-code-review/02-security-review-checklist.md) | Security review |
 | [03-architecture-review-checklist.md](examples/php-symfony-k8s/05-code-review/03-architecture-review-checklist.md) | Architecture review |
 | [04-quality-standards.md](examples/php-symfony-k8s/05-code-review/04-quality-standards.md) | Quality metrics |
-| [05-antipatterns.md](examples/php-symfony-k8s/05-code-review/05-antipatterns.md) | What to avoid |
+| [05-common-antipatterns.md](examples/php-symfony-k8s/05-code-review/05-common-antipatterns.md) | What to avoid |
 
 ### CI/CD (5 files)
 

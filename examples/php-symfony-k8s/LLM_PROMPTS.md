@@ -558,7 +558,7 @@ You can customize these prompts by:
 - **Primary Navigation**: [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md)
 - **Implementation Plan**: [IMPLEMENTATION_ROADMAP.md](IMPLEMENTATION_ROADMAP.md)
 - **Code Examples**: [CODE_EXAMPLES_INDEX.md](CODE_EXAMPLES_INDEX.md)
-- **Complete Index**: [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
+- **Complete Index**: [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md)
 
 ---
 

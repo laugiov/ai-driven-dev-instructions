@@ -1526,7 +1526,7 @@ final class CreateUserTest extends KernelTestCase
 
 **Solution**:
 1. Look for cross-reference link in the file (200+ links throughout docs)
-2. If no link, search in [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
+2. If no link, search in [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md)
 3. Read that file, then return to original file
 
 **Example**:
@@ -1662,7 +1662,7 @@ final class CreateUserTest extends KernelTestCase
 **Solution**:
 
 1. **Find similar feature in documentation**:
-   - Search in [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
+   - Search in [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md)
    - Look for similar use cases in existing services
 
 2. **Follow same patterns**:
@@ -1781,4 +1781,4 @@ final class CreateUserTest extends KernelTestCase
 **Documentation Version**: 2.0.0
 **Next Review**: After first LLM-driven implementation
 
-**For Questions**: This is the master navigation guide. If you cannot find what you need here, consult [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) for the complete file listing.
+**For Questions**: This is the master navigation guide. If you cannot find what you need here, consult [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md) for the complete file listing.

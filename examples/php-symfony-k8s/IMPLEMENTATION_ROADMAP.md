@@ -2241,4 +2241,4 @@ kubectl exec -n production <canary-pod> -c app -- ls -la /vault/secrets/
 **Roadmap Version**: 1.0.0
 **Status**: Ready for Implementation
 
-**For Questions**: Refer to [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) for task-based navigation and [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) for complete documentation index.
+**For Questions**: Refer to [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) for task-based navigation and [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md) for complete documentation index.

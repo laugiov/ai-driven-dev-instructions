@@ -130,23 +130,22 @@ Link check: 8/8 valid
 > Fast access to essential documentation.
 
 ## Getting Started
-- [README](../README.md) — Project overview
-- [Repository Map](../REPO_MAP.md) — Navigation guide
+- [README](../../README.md) — Project overview
+- [Repository Map](../../REPO_MAP.md) — Navigation guide
 
 ## For Developers
-- [LLM Usage Guide](../LLM_USAGE_GUIDE.md) — AI agent entry point
-- [Methodology](../METHODOLOGY.md) — Documentation approach
+- [Methodology](../../METHODOLOGY.md) — Documentation approach
 
 ## For Security
-- [Security Checklist](../02-security/07-security-checklist.md) — Pre-deployment validation
+- [Security Checklist](../../examples/php-symfony-k8s/02-security/07-security-checklist.md) — Pre-deployment validation (example)
 
 ## For Agentic Development
-- [Core Specification](../core/README.md) — Agentic-ready framework
-- [Checkpoints](../core/spec/CHECKPOINTS.md) — Validation gates
-- [Escalation Rules](../core/agent-operating-model/ESCALATION_RULES.md) — When to ask
+- [Core Specification](../../core/README.md) — Agentic-ready framework
+- [Checkpoints](../../core/spec/CHECKPOINTS.md) — Validation gates
+- [Escalation Rules](../../core/agent-operating-model/ESCALATION_RULES.md) — When to ask
 
 ---
-*See [DOCUMENTATION_INDEX.md](../DOCUMENTATION_INDEX.md) for complete file listing.*
+*See [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md) for complete file listing.*
 ```
 
 **C2 Exit Criteria**: ✅ File created, links verified

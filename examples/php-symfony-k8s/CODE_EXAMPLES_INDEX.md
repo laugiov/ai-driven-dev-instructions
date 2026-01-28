@@ -1551,4 +1551,4 @@ When adding new code examples to documentation:
 **Index Version**: 1.0.0
 **Total Examples Indexed**: 500+
 
-**For Questions**: Refer to [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) for navigation guidance and [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) for complete file listing.
+**For Questions**: Refer to [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) for navigation guidance and [DOCUMENTATION_INDEX.md](../../DOCUMENTATION_INDEX.md) for complete file listing.
