@@ -2,7 +2,7 @@
 
 > **Find your path in 60 seconds.**
 
-This repository serves two purposes: (1) a methodology for secure, auditable AI-assisted development, and (2) a practical framework for agentic workflows where AI agents autonomously handle Issue→PR cycles with human oversight at checkpoints.
+A **technology-agnostic framework** for autonomous AI-driven software delivery — from Issue to PR with human oversight at defined checkpoints.
 
 ---
 
@@ -10,10 +10,9 @@ This repository serves two purposes: (1) a methodology for secure, auditable AI-
 
 | Profile | Start Here | Then Read |
 |---------|------------|-----------|
-| **Developer** | [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) | [04-development/](04-development/) |
-| **Security Engineer** | [02-security/07-security-checklist.md](02-security/07-security-checklist.md) | [02-security/](02-security/) |
-| **Agentic Researcher** | [core/README.md](core/README.md) | [runtime/](runtime/) → [bench/](bench/) |
 | **Apply to Your Project** | [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) | [core/](core/) → [runtime/prompts/](runtime/prompts/) |
+| **Agentic Researcher** | [core/README.md](core/README.md) | [runtime/](runtime/) → [bench/](bench/) |
+| **Explore the Example** | [examples/php-symfony-k8s/](examples/php-symfony-k8s/) | [LLM_USAGE_GUIDE](examples/php-symfony-k8s/LLM_USAGE_GUIDE.md) |
 
 ---
 
@@ -22,59 +21,74 @@ This repository serves two purposes: (1) a methodology for secure, auditable AI-
 ```
 ai-driven-dev-instructions/
 │
-├── [Root Documentation]
-│   ├── README.md                    # Project overview
-│   ├── REPO_MAP.md                  # This file — navigation hub
-│   ├── METHODOLOGY.md               # Core methodology
-│   ├── LLM_USAGE_GUIDE.md          # Agent entry point
-│   ├── DOCUMENTATION_INDEX.md       # Complete file index
-│   └── GLOSSARY.md                  # Terminology
-│
-├── [Reference Documentation]        # The "what" — specs and standards
-│   ├── 01-architecture/             # System design, ADRs, patterns
-│   ├── 02-security/                 # Security-by-design specs
-│   ├── 03-infrastructure/           # Cloud-native infrastructure
-│   ├── 04-development/              # Coding standards
-│   ├── 05-code-review/              # Review checklists
-│   ├── 06-cicd/                     # Pipeline and deployment
-│   ├── 07-operations/               # Monitoring, incidents
-│   └── 08-services/                 # Microservice specifications
-│
-├── [Agentic Dev Reference]          # The "how" — agentic workflows
-│   ├── core/                        # Normative spec (rules, roles, templates)
-│   ├── runtime/                     # Execution (prompts, gates, quickstart)
-│   ├── bench/                       # Benchmark (tasks, scoring, runner)
+├── [Framework]                      # Technology-agnostic core
+│   ├── core/                        # Agent operating model, checkpoints, templates
+│   │   ├── agent-operating-model/   # Roles, workflow, escalation, handoffs
+│   │   ├── spec/                    # Checkpoints, DoD, risk model
+│   │   └── templates/               # ADR template
+│   │
+│   ├── runtime/                     # Execution guides and prompts
+│   │   ├── golden-path/             # Quickstarts, bootstrap, first task
+│   │   ├── prompts/                 # Agent role prompts, system prompt
+│   │   └── quality-gates/           # Definition of Done
+│   │
+│   ├── bench/                       # Benchmark suite
+│   │   ├── tasks/                   # 10 benchmark tasks (T001-T010)
+│   │   ├── scoring/                 # Scoring schema and rubric
+│   │   └── runner/                  # Execution scripts
+│   │
 │   └── tools/                       # Validation utilities
+│
+├── [Examples]                       # Stack-specific implementations
+│   └── php-symfony-k8s/             # Complete reference (52 docs)
+│       ├── 01-architecture/         # System design, ADRs, DDD
+│       ├── 02-security/             # Zero Trust, OAuth2, Vault
+│       ├── 03-infrastructure/       # Kubernetes, Istio, observability
+│       ├── 04-development/          # Coding standards, testing, APIs
+│       ├── 05-code-review/          # Review checklists
+│       ├── 06-cicd/                 # Pipeline, GitOps
+│       ├── 07-operations/           # Monitoring, incidents, DR
+│       └── 08-services/             # 7 microservice specs
+│
+├── [Methodology]
+│   ├── README.md                    # Project overview
+│   ├── REPO_MAP.md                  # This file
+│   ├── METHODOLOGY.md               # Core methodology
+│   ├── GLOSSARY.md                  # Terminology
+│   └── DOCUMENTATION_INDEX.md       # Complete file index
+│
+├── [Case Studies]
+│   └── case-studies/                # Real-world applications
 │
 └── [Supporting]
     ├── CONTRIBUTING.md
     ├── LICENSE
-    └── .github/                     # GitHub templates & workflows
+    └── .github/                     # Templates & workflows
 ```
 
 ---
 
 ## Quick Start Paths
 
-### Path A: Understand the Methodology
-1. [METHODOLOGY.md](METHODOLOGY.md) — How to write AI-friendly documentation
-2. [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) — Task-based navigation for agents
-3. [IMPLEMENTATION_ROADMAP.md](IMPLEMENTATION_ROADMAP.md) — 13-week phased plan
+### Path A: Apply to Your Own Project
+1. [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) — Setup guide (full/minimal/agent-only)
+2. [core/spec/CHECKPOINTS.md](core/spec/CHECKPOINTS.md) — Adapt checkpoints to your stack
+3. [runtime/prompts/CLAUDE_CODE_SYSTEM.md](runtime/prompts/CLAUDE_CODE_SYSTEM.md) — Customize system prompt
 
-### Path B: Evaluate Security Practices
-1. [02-security/01-security-principles.md](02-security/01-security-principles.md) — Core principles
-2. [02-security/07-security-checklist.md](02-security/07-security-checklist.md) — Pre-deployment gates
-3. [05-code-review/02-security-review-checklist.md](05-code-review/02-security-review-checklist.md) — Review checklist
+### Path B: Understand the Framework
+1. [core/README.md](core/README.md) — Agent Operating Model overview
+2. [core/agent-operating-model/AGENT_OPERATING_MODEL.md](core/agent-operating-model/AGENT_OPERATING_MODEL.md) — Roles and workflow
+3. [runtime/README.md](runtime/README.md) — Execution guides
 
 ### Path C: Explore Agentic Development
 1. [core/README.md](core/README.md) — What "agentic-ready" means
 2. [runtime/README.md](runtime/README.md) — How to run agentic cycles
 3. [bench/README.md](bench/README.md) — Measure agent performance
 
-### Path D: Apply to Your Own Project
-1. [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) — Setup guide (full/minimal/agent-only)
-2. [core/spec/CHECKPOINTS.md](core/spec/CHECKPOINTS.md) — Adapt checkpoints to your stack
-3. [runtime/prompts/CLAUDE_CODE_SYSTEM.md](runtime/prompts/CLAUDE_CODE_SYSTEM.md) — Customize system prompt
+### Path D: Learn from the Example
+1. [examples/php-symfony-k8s/README.md](examples/php-symfony-k8s/README.md) — Example overview
+2. [examples/php-symfony-k8s/LLM_USAGE_GUIDE.md](examples/php-symfony-k8s/LLM_USAGE_GUIDE.md) — Task-based navigation
+3. [METHODOLOGY.md](METHODOLOGY.md) — Documentation methodology
 
 ---
 
@@ -92,16 +106,14 @@ See [GLOSSARY.md](GLOSSARY.md) for complete terminology.
 
 ---
 
-## What's New: Agentic Dev Reference
+## Framework vs Examples
 
-This repository is evolving to become a reference implementation for **autonomous AI-driven development**. The new structure adds:
+| Component | Purpose | Technology |
+|-----------|---------|------------|
+| **Framework** (core/, runtime/, bench/) | Universal agentic development patterns | Agnostic |
+| **Examples** (examples/) | Reference implementations | Stack-specific |
 
-- **core/** — The normative specification (MUST/SHOULD/MAY rules)
-- **runtime/** — Executable workflows (prompts, quality gates)
-- **bench/** — Measurable benchmarks (tasks, scoring)
-- **tools/** — Validation and automation utilities
-
-The existing documentation (01-08 directories) remains the reference example. The new structure provides the framework to make any repo "agentic-ready."
+The framework defines *how* AI agents work autonomously with human oversight. Examples show *what* this looks like for specific technology stacks.
 
 ---
 

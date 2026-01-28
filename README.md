@@ -1,26 +1,24 @@
-# AI-Driven Development Instructions
+# AI-Driven Development Framework
 
 [![Documentation](https://img.shields.io/badge/docs-99%20files-blue)](./DOCUMENTATION_INDEX.md)
-[![Code Examples](https://img.shields.io/badge/examples-500%2B-orange)](./CODE_EXAMPLES_INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> A reference framework for **secure, auditable AI-assisted software delivery** — from documentation methodology to autonomous agentic workflows.
+> A **technology-agnostic framework** for autonomous AI-driven software delivery — from Issue to PR with human oversight at defined checkpoints.
 
 ---
 
 ## What This Repo Is
 
-1. **A methodology** for writing unambiguous, security-by-design documentation that enables AI coding assistants to implement systems without drifting from standards.
+1. **An agentic development framework** for autonomous Issue→PR workflows where AI agents plan, implement, test, and deliver with human oversight at defined checkpoints.
 
-2. **A reference implementation** demonstrating the methodology through a complete platform specification (PHP 8.3, Symfony 7, Kubernetes).
+2. **A methodology** for writing unambiguous, security-by-design documentation that enables AI coding assistants to implement systems without drifting from standards.
 
-3. **An agentic development framework** for autonomous Issue→PR workflows where AI agents plan, implement, test, and deliver with human oversight at defined checkpoints.
+3. **A complete example** demonstrating the methodology applied to a real-world platform (PHP/Symfony/Kubernetes).
 
 ## What This Repo Is NOT
 
+- Not tied to any specific technology stack
 - Not a prompt library or "magic" AI coding tricks
-- Not a full product implementation
-- Not a universal agent or model comparison
 - Not autonomous execution without human supervision
 
 ---
@@ -29,11 +27,10 @@
 
 | Your Goal | Start With |
 |-----------|------------|
-| Understand the methodology | [METHODOLOGY.md](METHODOLOGY.md) |
-| Navigate as an AI agent | [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) |
-| Evaluate security practices | [02-security/07-security-checklist.md](02-security/07-security-checklist.md) |
-| Explore agentic workflows | [core/README.md](core/README.md) |
 | **Apply to your own project** | [BOOTSTRAP_NEW_PROJECT.md](runtime/golden-path/BOOTSTRAP_NEW_PROJECT.md) |
+| Explore agentic workflows | [core/README.md](core/README.md) |
+| Understand the methodology | [METHODOLOGY.md](METHODOLOGY.md) |
+| See a complete example | [examples/php-symfony-k8s/](examples/php-symfony-k8s/) |
 | Find your path by profile | [REPO_MAP.md](REPO_MAP.md) |
 
 ---
@@ -41,18 +38,52 @@
 ## Repository Structure
 
 ```
-├── [Methodology & Guides]     README, METHODOLOGY, LLM_USAGE_GUIDE, REPO_MAP
-├── [Reference Specs]          01-architecture/ through 08-services/
-├── [Agentic Framework]
-│   ├── core/                  Specification, operating model, templates
+├── [Framework]
+│   ├── core/                  Agent operating model, checkpoints, templates
 │   ├── runtime/               Quickstarts, prompts, quality gates
 │   ├── bench/                 10 benchmark tasks, scoring, runner
 │   └── tools/                 Validation utilities
+│
+├── [Examples]
+│   └── php-symfony-k8s/       Complete reference implementation
+│
+├── [Methodology]              README, METHODOLOGY, GLOSSARY
 ├── [Case Studies]             case-studies/
 └── [Supporting]               LICENSE, CONTRIBUTING, .github/
 ```
 
 Full index: [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md)
+
+---
+
+## The Framework
+
+### Agent Operating Model
+
+Defines how AI agents work autonomously within boundaries:
+- **5 Roles**: Manager, Planner, Implementer, Tester, Reviewer
+- **Workflow**: Plan → Act → Observe → Fix
+- **Checkpoints**: C0 (scope) → C1 (plan) → C2 (implement) → C3 (PR)
+
+See [core/agent-operating-model/](core/agent-operating-model/)
+
+### Escalation Rules
+
+When agents must pause and request human input:
+- Architecture decisions
+- Security concerns
+- Multiple valid approaches
+- Iteration limits reached
+
+See [core/agent-operating-model/ESCALATION_RULES.md](core/agent-operating-model/ESCALATION_RULES.md)
+
+### Quality Gates
+
+Definition of Done by change type:
+- Documentation, code, configuration, schema changes
+- Machine-checkable and human-judgment criteria
+
+See [runtime/quality-gates/](runtime/quality-gates/)
 
 ---
 
@@ -64,31 +95,31 @@ Every decision includes justification. AI agents follow documented reasoning, no
 ### Validation Checkpoints
 Every workflow stage includes verification criteria for self-validation.
 
-### Security Gates as Code
-Security requirements become enforceable pipeline gates, not optional guidelines.
-
 ### Human at the Checkpoints
 Autonomous execution within bounds; escalation and approval at defined gates.
 
----
-
-## Security & Compliance
-
-Includes enterprise-grade security guidance: Zero Trust Architecture, IAM & Secrets Management, Network & Data Protection, Incident Response, and alignment with GDPR, SOC2, ISO27001, and NIS2.
+### Technology Agnostic
+The framework applies to any stack. Adapt checkpoints and prompts to your tools.
 
 ---
 
-## Technology Stack (Reference Example)
+## Examples
 
-| Category | Technology |
-|----------|------------|
-| Language | PHP 8.3+ / Symfony 7.x |
-| Database | PostgreSQL 15+ |
-| Message Broker | RabbitMQ 3.12+ |
-| Orchestration | Kubernetes 1.28+ / Istio 1.20+ |
-| Security | Keycloak, HashiCorp Vault |
-| Observability | Prometheus, Grafana, Loki, Tempo |
-| CI/CD | GitHub Actions + ArgoCD |
+### PHP/Symfony/Kubernetes
+
+A complete reference implementation with 52 documentation files:
+
+| Area | Content |
+|------|---------|
+| Architecture | Hexagonal, DDD, microservices |
+| Security | Zero Trust, OAuth2, Vault |
+| Infrastructure | Kubernetes, Istio, observability |
+| Development | Coding standards, testing, APIs |
+| Operations | Monitoring, incident response, DR |
+
+See [examples/php-symfony-k8s/](examples/php-symfony-k8s/)
+
+*More examples welcome via contributions.*
 
 ---
 
@@ -96,10 +127,8 @@ Includes enterprise-grade security guidance: Zero Trust Architecture, IAM & Secr
 
 | Metric | Value |
 |--------|-------|
-| Documentation files | 99 |
-| Words | ~250,000 |
-| Code examples | 500+ |
-| Microservices documented | 7 |
+| Framework documents | 47 |
+| Example documents | 52 |
 | Benchmark tasks | 10 |
 | Agent prompts | 6 |
 
@@ -119,4 +148,4 @@ MIT License — See [LICENSE](LICENSE) for details.
 
 ---
 
-*A framework for secure, auditable AI-assisted software delivery.*
+*A technology-agnostic framework for AI-driven software delivery.*

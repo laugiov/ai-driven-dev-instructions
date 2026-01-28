@@ -284,5 +284,5 @@ Application that sends messages to an exchange or queue.
 ## See Also
 
 - [METHODOLOGY.md](METHODOLOGY.md) - AI-Driven Development methodology
-- [01-architecture/01-architecture-overview.md](01-architecture/01-architecture-overview.md) - Architecture concepts in context
-- [02-security/01-security-principles.md](02-security/01-security-principles.md) - Security concepts in context
+- [Architecture Overview](examples/php-symfony-k8s/01-architecture/01-architecture-overview.md) - Architecture concepts in context (PHP/Symfony example)
+- [Security Principles](examples/php-symfony-k8s/02-security/01-security-principles.md) - Security concepts in context (PHP/Symfony example)

@@ -263,7 +263,7 @@ Configure Istio service mesh with the following settings:
 See the security documentation for more details.
 
 <!-- Good -->
-See [02-security/03-authentication-authorization.md](02-security/03-authentication-authorization.md)
+See [Authentication & Authorization](examples/php-symfony-k8s/02-security/03-authentication-authorization.md)
 for OAuth2 flow implementation details.
 ```
 
@@ -389,9 +389,9 @@ markdownlint "**/*.md" --config .markdownlint.json
 
 ## Further Reading
 
-- [LLM_USAGE_GUIDE.md](LLM_USAGE_GUIDE.md) - See these principles in action
-- [IMPLEMENTATION_ROADMAP.md](IMPLEMENTATION_ROADMAP.md) - Task-based implementation plan
-- [CODE_EXAMPLES_INDEX.md](CODE_EXAMPLES_INDEX.md) - Index of all code examples
+- [LLM_USAGE_GUIDE.md](examples/php-symfony-k8s/LLM_USAGE_GUIDE.md) - See these principles in action (PHP/Symfony example)
+- [IMPLEMENTATION_ROADMAP.md](examples/php-symfony-k8s/IMPLEMENTATION_ROADMAP.md) - Task-based implementation plan (PHP/Symfony example)
+- [CODE_EXAMPLES_INDEX.md](examples/php-symfony-k8s/CODE_EXAMPLES_INDEX.md) - Index of all code examples (PHP/Symfony example)
 - [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute to this project
 
 ---

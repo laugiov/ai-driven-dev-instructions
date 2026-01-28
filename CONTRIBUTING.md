@@ -191,7 +191,7 @@ Always use relative links:
 
 ```markdown
 <!-- Good -->
-See [Architecture Overview](01-architecture/01-architecture-overview.md)
+See [Architecture Overview](examples/php-symfony-k8s/01-architecture/01-architecture-overview.md)
 
 <!-- Avoid -->
 See [Architecture Overview](/full/path/to/file.md)
