@@ -123,17 +123,6 @@ See [examples/php-symfony-k8s/](examples/php-symfony-k8s/)
 
 ---
 
-## Metrics
-
-| Metric | Value |
-|--------|-------|
-| Framework documents | 47 |
-| Example documents | 52 |
-| Benchmark tasks | 10 |
-| Agent prompts | 6 |
-
----
-
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
