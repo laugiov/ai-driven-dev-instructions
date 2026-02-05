@@ -107,7 +107,7 @@ The framework applies to any stack. Adapt checkpoints and prompts to your tools.
 
 ### PHP/Symfony/Kubernetes
 
-A complete reference implementation with 52 documentation files:
+A complete reference implementation with documentation files:
 
 | Area | Content |
 |------|---------|
