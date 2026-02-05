@@ -8,11 +8,11 @@ This directory contains the normative specification for AI-driven development wo
 
 ## Contents
 
-| Directory | Purpose | Status |
-|-----------|---------|--------|
-| [spec/](spec/) | AIDD specification and checkpoints | ✅ Active |
-| [agent-operating-model/](agent-operating-model/) | Roles, workflows, escalation rules | ✅ Active |
-| [templates/](templates/) | Issue, PR, and ADR templates | ✅ Active |
+| Directory | Purpose |
+|-----------|---------|
+| [spec/](spec/) | AIDD specification and checkpoints |
+| [agent-operating-model/](agent-operating-model/) | Roles, workflows, escalation rules |
+| [templates/](templates/) | Issue, PR, and ADR templates |
 
 ---
 
