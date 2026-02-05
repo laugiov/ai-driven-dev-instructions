@@ -105,7 +105,7 @@ jobs:
         run: |
           echo "Checking README.md structure..."
           required_sections=(
-            "What This Repo Is"
+            "What Problem This Solves"
             "Start Here"
           )
 
